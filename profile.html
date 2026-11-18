@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrianto - Portofolio Professional (Admin Staff & Customer Service)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="text-lg font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                Andrianto.
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#tentang" class="hover:text-blue-600 transition">Tentang</a>
+                <a href="#pengalaman" class="hover:text-blue-600 transition">Pengalaman</a>
+                <a href="#keahlian" class="hover:text-blue-600 transition">Keahlian</a>
+                <a href="#pendidikan" class="hover:text-blue-600 transition">Pendidikan</a>
+                <a href="#kontak" class="hover:text-blue-600 transition">Kontak</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <a href="#kontak" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition shadow-sm shadow-blue-200">
+                    Hubungi Saya
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-2">
+            <a href="#tentang" class="block py-2 text-slate-600 hover:text-blue-600 font-medium">Tentang</a>
+            <a href="#pengalaman" class="block py-2 text-slate-600 hover:text-blue-600 font-medium">Pengalaman</a>
+            <a href="#keahlian" class="block py-2 text-slate-600 hover:text-blue-600 font-medium">Keahlian</a>
+            <a href="#pendidikan" class="block py-2 text-slate-600 hover:text-blue-600 font-medium">Pendidikan</a>
+            <a href="#kontak" class="block py-2 text-slate-600 hover:text-blue-600 font-medium">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-blue-50/50 via-white to-slate-50 overflow-hidden relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 bg-blue-50 border border-blue-100 rounded-full text-blue-700 text-xs font-semibold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                        Terbuka untuk Peluang Kerja Baru
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
+                        Halo, Saya <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Andrianto</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl font-medium text-slate-600">
+                        Admin Staff & Customer Service Specialist
+                    </p>
+                    <p class="text-slate-600 max-w-xl mx-auto md:mx-0 leading-relaxed text-sm sm:text-base">
+                        Lulusan Teknik Komputer dan Jaringan dengan pengalaman luas dalam administrasi operasional, pengelolaan pesanan online shop (Shopee Seller Center), logistik (Ninja Xpress), serta komunikasi pelanggan yang solutif dan teliti.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 pt-2">
+                        <a href="#kontak" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition shadow-md shadow-blue-200">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Kirim Pesan
+                        </a>
+                        <a href="#pengalaman" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 transition">
+                            Lihat Portofolio <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-gradient-to-tr from-blue-600 to-indigo-500 p-2 shadow-xl shadow-blue-500/10">
+                        <div class="w-full h-full bg-white rounded-2xl flex flex-col items-center justify-center p-6 text-center">
+                            <div class="w-28 h-28 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 text-5xl mb-4 shadow-inner">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-800 text-lg">Andrianto</h3>
+                            <p class="text-xs text-slate-500 font-medium mt-1">Kota Blitar, Jawa Timur</p>
+                            <div class="mt-4 flex space-x-3 text-slate-600">
+                                <a href="tel:0895397067025" class="w-9 h-9 bg-slate-100 rounded-full flex items-center justify-center hover:bg-blue-50 hover:text-blue-600 transition" title="Telepon">
+                                    <i class="fa-solid fa-phone text-sm"></i>
+                                </a>
+                                <a href="mailto:andri12ws@gmail.com" class="w-9 h-9 bg-slate-100 rounded-full flex items-center justify-center hover:bg-blue-50 hover:text-blue-600 transition" title="Email">
+                                    <i class="fa-solid fa-envelope text-sm"></i>
+                                </a>
+                                <a href="#kontak" class="w-9 h-9 bg-slate-100 rounded-full flex items-center justify-center hover:bg-blue-50 hover:text-blue-600 transition" title="Lokasi">
+                                    <i class="fa-solid fa-location-dot text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="tentang" class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Tentang Saya</h2>
+                <p class="mt-2 text-slate-600">Profil ringkas, latar belakang, dan komitmen profesional saya.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-address-card"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Profil Utama</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Lulusan Teknik Komputer dan Jaringan (TKJ) SMK Islam 1 Blitar yang handal dalam administrasi, pencatatan data akurat, serta operasional harian kantor maupun e-commerce.
+                    </p>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Customer Service</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Terbiasa berinteraksi dengan pelanggan secara ramah & solutif, menangani komplain secara profesional, serta menjaga performa toko online agar tetap sesuai standar marketplace.
+                    </p>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Etos Kerja</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Bekerja dengan teliti, cepat, penuh tanggung jawab, mudah beradaptasi dengan teknologi baru, serta siap melakukan perjalanan dinas jika diperlukan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Kerja -->
+    <section id="pengalaman" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Pengalaman Kerja</h2>
+                <p class="mt-2 text-slate-600">Rekam jejak profesional di bidang administrasi dan e-commerce.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- Pengalaman 1 -->
+                <div class="relative pl-8 sm:pl-10 border-l-2 border-blue-600">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full ring-4 ring-blue-100"></div>
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Admin Online Shop Shopee</h3>
+                                <p class="text-blue-600 font-medium text-sm">Blitar, Indonesia</p>
+                            </div>
+                            <span class="inline-block mt-2 sm:mt-0 px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold w-max">
+                                Januari 2023 - Maret 2026
+                            </span>
+                        </div>
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                                Mengelola pesanan pelanggan melalui Shopee Seller Center.
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                                Memproses pesanan dan memastikan pengiriman tepat waktu.
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                                Menginput nomor resi dan memperbarui status pesanan.
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                                Menangani pertanyaan pelanggan melalui fitur chat dengan ramah dan solutif.
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                                Mempertahankan performa toko sesuai standar marketplace.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pengalaman 2 -->
+                <div class="relative pl-8 sm:pl-10 border-l-2 border-slate-300">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-400 rounded-full ring-4 ring-slate-100"></div>
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Admin Ninja Xpress</h3>
+                                <p class="text-blue-600 font-medium text-sm">Ninja Xpress Blitar, Indonesia</p>
+                            </div>
+                            <span class="inline-block mt-2 sm:mt-0 px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-semibold w-max">
+                                Juni 2021 - Desember 2022
+                            </span>
+                        </div>
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                                Mengelola administrasi operasional cabang secara harian.
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                                Menyusun dan merekap laporan operasional harian secara akurat.
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                                Berkoordinasi dengan kurir dan tim operasional terkait kelancaran pengiriman.
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                                Menangani komplain pelanggan terkait status pengiriman dengan baik.
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                                Memastikan data pengiriman akurat dan terdokumentasi dengan baik.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keahlian & Sertifikasi -->
+    <section id="keahlian" class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Keahlian & Sertifikasi</h2>
+                <p class="mt-2 text-slate-600">Kompetensi teknis dan kemampuan pendukung untuk menunjang produktivitas kerja.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Hard Skills -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Hard Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Microsoft Office (Excel, Word, PowerPoint)</span>
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Canva</span>
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Administrasi Data</span>
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Pengelolaan Pesanan</span>
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Shopee Seller Center</span>
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Komunikasi Pelanggan</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Soft Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Cepat Belajar & Adaptif</span>
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Analitis & Problem Solving</span>
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Komunikasi Baik</span>
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Kerjasama Tim</span>
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Bekerja di Bawah Tekanan</span>
+                        <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 shadow-sm">Pekerja Keras & Bertanggung Jawab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sertifikasi & Pengalaman Lain -->
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white shadow-xl">
+                <h3 class="text-xl font-bold mb-6 flex items-center">
+                    <i class="fa-solid fa-certificate mr-3 text-yellow-300"></i> Sertifikasi & Pengalaman Terkait
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+                        <div class="font-semibold text-white text-sm">Sertifikat Praktik Kerja Lapangan PLN Rayon Pare</div>
+                        <div class="text-blue-100 text-xs mt-1">Tahun 2021</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+                        <div class="font-semibold text-white text-sm">Sertifikat Kompetensi Teknik Komputer dan Jaringan</div>
+                        <div class="text-blue-100 text-xs mt-1">SMK Islam 1 Blitar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pendidikan -->
+    <section id="pendidikan" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Pendidikan</h2>
+                <p class="mt-2 text-slate-600">Latar belakang pendidikan formal.</p>
+            </div>
+
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl flex-shrink-0 mt-1">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                            <h3 class="text-lg font-bold text-slate-900">SMK Islam 1 Blitar</h3>
+                            <span class="text-xs font-semibold bg-blue-50 text-blue-700 px-3 py-1 rounded-full w-max">2018 - 2021</span>
+                        </div>
+                        <p class="text-blue-600 font-medium text-sm mb-2">Teknik Komputer dan Jaringan (TKJ)</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Menempuh pendidikan kejuruan dengan fokus pada perangkat keras, jaringan komputer, serta dasar-dasar teknologi informasi yang menunjang kemampuan adaptasi digital.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak / Hubungi Saya -->
+    <section id="kontak" class="py-20 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Hubungi Saya</h2>
+                <p class="mt-2 text-slate-600">Mari diskusikan peluang kerja sama atau penawaran posisi bersama Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <!-- Info Kontak -->
+                <div class="md:col-span-5 space-y-6">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-medium">Telepon / WhatsApp</div>
+                                <a href="tel:0895397067025" class="text-slate-800 font-semibold hover:text-blue-600 transition">0895397067025</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-medium">Email</div>
+                                <a href="mailto:andri12ws@gmail.com" class="text-slate-800 font-semibold hover:text-blue-600 transition">andri12ws@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-medium">Alamat</div>
+                                <p class="text-slate-800 font-semibold text-sm">Jl. Tanjung No 10 RT 1 RW 8, Kec/Kel Sukorejo, Kota Blitar 66121</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Simulasi -->
+                <div class="md:col-span-7 bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <form id="contact-form" onsubmit="handleSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Nama Lengkap</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm" placeholder="Masukkan nama Anda">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Email / Kontak</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm" placeholder="Email atau nomor HP Anda">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Pesan / Penawaran</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm" placeholder="Tuliskan pesan atau tawaran kerja..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition shadow-md shadow-blue-200 text-sm">
+                            Kirim Pesan Sekarang
+                        </button>
+                    </form>
+                    <div id="success-msg" class="hidden mt-4 p-4 bg-emerald-50 border border-emerald-200 text-emerald-700 text-sm rounded-xl text-center font-medium">
+                        Terima kasih! Pesan Anda telah berhasil disimulasikan terkirim ke Andrianto.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-left">
+                <span class="text-white font-bold text-lg">Andrianto</span>
+                <p class="text-xs mt-1">Admin Staff & Customer Service Professional</p>
+            </div>
+            <p class="text-xs text-slate-500">
+                &copy; 2026 Andrianto. All rights reserved. Built with HTML, Tailwind CSS & JavaScript.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script Interaktif -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form Submit Simulation
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contact-form');
+            const successMsg = document.getElementById('success-msg');
+            
+            form.reset();
+            successMsg.classList.remove('hidden');
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
